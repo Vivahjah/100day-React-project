@@ -1,5 +1,6 @@
 import React from "react";
 
+//just an image address gotten from Unsplash
 const IMG_PATH = "https://image.tmdb.org/t/t/p/w1280";
 
 const Movie = ({ title, poster_path, overview, vote_average }) => {
