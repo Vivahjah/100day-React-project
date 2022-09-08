@@ -1,24 +1,19 @@
-import "./App.css";
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Header from "./components/Header";
-import Homepage from "./pages/Homepage";
-import CoinPage from "./pages/CoinPage";	
-
+import React from "react"
+import { Routes, Route } from "react-router-dom"
+import './App.css'
+import Header from "./components/Header"
+import CoinPage from "./pages/CoinPage"
+import Homepage from "./pages/Homepage"
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
-    <Routes>
-
-      <Route path="/" exact component={Homepage} />
-      <Route path="/coins/:id" exact component={CoinPage} />
-  
-    
-    </Routes>
-
-    </BrowserRouter>
-   
+    <div className="App">
+    <Header />
+      <Routes>
+        <Route path="/" element={ <Homepage/> } />
+        <Route path="/coins/:id" element={ <CoinPage/> } />        
+      </Routes>
+    </div>
   )
 }
 
-export default App;
+export default App
