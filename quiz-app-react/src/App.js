@@ -7,7 +7,12 @@ export default function App() {
     const [showScore, setShowScore] = useState(false);
     const [score, setScore] = useState(0);
 
-
+    const handleReset =()=> {
+        setShowScore(false)
+        setCurrentQuestion(0)
+        setScore(0)
+        
+    }
     const handleClick = (isCorrect) => {
 
         if (isCorrect=== true) {
@@ -68,7 +73,7 @@ export default function App() {
 			{showScore ? (<div className='xv'>
 
 				<div className='score-section'>You scored {score} out of {questions.length}</div>
-                <button className='bt'>Reset Question</button>
+                <button onClick={handleReset} className='bt'>Reset Question</button>
             </div>
 			) : (
 				<>
