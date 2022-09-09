@@ -31,9 +31,7 @@ body {
 }
 
 .score-section {
-    display: flex;
     font-size: 24px;
-    align-items: center;
 }
 
 
@@ -42,6 +40,27 @@ body {
 .question-section {
     width: 100%;
     position: relative;
+}
+
+.xv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bt {
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #252d4a;
+    border-radius: 15px;
+    padding: 0.3rem;
+    margin: 0.3rem;
+    border: 5px solid #234668;
+    cursor: pointer;
+}
+
+.bt:hover {
+    background-color: #555e7d;
 }
 
 .question-count {
@@ -76,7 +95,7 @@ body {
     justify-content: space-between;
 }
 
-button {
+.btn {
     width: 100%;
     font-size: 16px;
     color: #ffffff;
@@ -98,14 +117,14 @@ button {
     background-color: #ff3333;
 }
 
-button:hover {
+.btn:hover {
     background-color: #555e7d;
 }
 
-button:focus {
+.btn:focus {
     outline: none;
 }
 
-button svg {
+.btn svg {
     margin-right: 5px;
 }
