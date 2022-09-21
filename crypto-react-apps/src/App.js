@@ -1,51 +1,47 @@
-import React, {useState, useEffect} from 'react'
-import Movie from './components/Movie';
-import './App.css'
-
-
-const APIURL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1";
-const SEARCHAPI = "https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query=";
-
+import React, { useState, useEffect } from "react";
+import Coin from "./Coin";
+import "./App.css";
 
 function App() {
-  const [movies, setMovies] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
-  
-  useEffect( () => {
-   fetch(APIURL).then(res => res.json()).then(data => setMovies(data.results));
-    console.log(movies);
-}, [])
+  const [coins, setCoins] = useState([]);
+  const [search, setSearch] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if(searchTerm) {
+  const APIURL =
+    "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false";
 
-      fetch(SEARCHAPI + searchTerm).then(res => res.json()).then(data => setMovies(data.results));
-    }
+  useEffect(() => {
+    fetch(APIURL)
+      .then((res) => res.json())
+      .then((res) => setCoins(res))
+      .catch((error) => console.log(error));
+  }, []);
 
-    setSearchTerm('');
-    
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+  };
 
-  }
+  //fitering the coins
+  const filteredCoins = coins.filter((coin) =>
+    coin.name.toLowerCase().includes(search.toLowerCase())
+  );
 
   return (
-    <>
-    <header>
-    <form onSubmit={handleSubmit}>
-      <input value={searchTerm} type="search" className='search' placeholder='search...' onChange={(e) => setSearchTerm(e.target.value)}  />
-
-    </form>
-    </header>
-
-    <div className='movie-container'>
-      {movies.map((movie) => {
-        return <div>
-          <Movie key={movie.id} {...movie} />
-        </div>
+    <div className="coin-app">
+      <div className="coin-search">
+        <div className="coin-text">Search a Currency</div>
+        <form>
+          <input
+            onChange={handleChange}
+            type="text"
+            placeholder="Search"
+            className="coin-input"
+          />
+        </form>
+      </div>
+      {filteredCoins.map((coin) => {
+        return <Coin key={coin.id} {...coin} />;
       })}
     </div>
-    </>
-    
   );
 }
 

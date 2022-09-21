@@ -1,99 +1,114 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    background-color: #22254b;
     font-family: "Poppins", san-serif;
-    margin: 0;
-    color: aliceblue;
+    color: white;
+    background-color: #1a1a1c;
 }
 
-header {
-    background-color: #373b69;
-    padding: 1rem;
+.coin-container {
     display: flex;
-    justify-content: flex-end;
-}
-
-.search {
-    background-color: transparent;
-    padding: 1rem;
-    font-size: 1.2rem;
-    font-family: inherit;
-    color: wheat;
-    border: 2px solid #22254b;
-    outline: none;
-}
-
-.movie-container {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
 }
 
-.movie {
-    width: 300px;
-    margin: 1rem;
-    background-color: #373b69;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    position: relative;
+.coin-row {
+    display: flex;
+    flex-direction: row;
+    justify-items: start;
+    align-items: center;
+    height: 80px;
+    border-bottom: 1px solid #d7d7d7;
+    width: 900px;
 }
 
-.movie img {
-    object-fit: cover;
-    height: 450px;
+.coin {
+    display: flex;
+    align-items: center;
+    padding-right: 24px;
+    min-width: 300px;
+}
+
+.coin img {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}
+
+.coin-data {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
     width: 100%;
 }
 
-.movie-info {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
+.coin-symbol {
+    text-transform: uppercase;
 }
 
-.movie-info h3 {
-    margin: 0;
+.coin h1 {
+    width: 150px;
+    font-size: 16px;
 }
 
-.movie img {
-    max-width: 100%;
+.coin-price {
+    width: 110px;
 }
 
-.movie-over {
-    background-color: #22254b;
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    overflow: auto;
-    max-height: 100%;
-    transform: translateY(100%);
-    transition: transform 0.3s ease-in-out;
+.coin-volume {
+    width: 240px;
 }
 
-.movie:hover .movie-over {
-    transform: translateY(0%);
+.coin-marketcap {
+    width: 155px
 }
 
-.movie-info span {
-    background-color: #22254b;
-    padding: 0.25rem 0.5rem;
-    border-radius: 3px;
-    font-weight: bold;
+.coin-percent {
+    width: 80px;
 }
 
-.movie-info span.green {
-    color: greenyellow
-}
-
-.movie-info span.red {
+.red {
     color: red;
 }
 
-.movie-info span.orange {
-    color: orange;
+.green {
+    color: green
+}
+
+.coin-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 64px;
+}
+
+.coin-search {
+    margin-bottom: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.coin-text {
+    margin-bottom: 32px;
+}
+
+.coin-input {
+    padding-left: 16px;
+    width: 300px;
+    height: 50px;
+    border-radius: 4px;
+    background-image: linear-gradient(-225deg, #ac32e4 0%, #7918f2 48%, #4891ff 100%);
+    color: #e2e2e2;
+    outline: none;
+}
+
+.coin-input::placeholder {
+    color: #e2e2e2;
+    font-family: inherit;
 }
