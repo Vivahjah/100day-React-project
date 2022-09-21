@@ -36,7 +36,7 @@ function App() {
           <div>
             <Routes>
               {/* Dashboards */}
-              <Route path="/" element="Ecommerce" />
+              <Route path="/" exact element="Ecommerce" />
               <Route path="/ecommerce" element="Ecommerce" />
               {/* Pages */}
               <Route path="/Orders" element="Orders" />

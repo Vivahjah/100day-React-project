@@ -10,6 +10,7 @@ import avatar from '../data/avatar.jpg';
 import { Cart, Chat, Notification, UserProfile } from '.';
 import { useStateContext } from '../contexts/ContextProvider';
 
+// Creating a reUsable component for the Navbar component
 const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
   <TooltipComponent content={title} position="BottomCenter">
     <button
@@ -78,6 +79,7 @@ const Navbar = () => {
           </div>
         </TooltipComponent>
 
+        {/* if isClicked is true, thenit will render it's component */}
         {isClicked.cart && (<Cart />)}
         {isClicked.chat && (<Chat />)}
         {isClicked.notification && (<Notification />)}
