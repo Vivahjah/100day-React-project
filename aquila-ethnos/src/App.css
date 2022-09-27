@@ -1,4 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Montserrat:wght@300;400;800&display=swap');
+:root {
+    --primary-color: #0171DB;
+    --background: #1A303D;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -6,8 +11,17 @@
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffff;
+}
+
+nav {
+    width: 100%;
+    background-color: #1A303D;
+}
+
+.nav-bar {
+    padding: 1.5rem 0;
 }
 
 .container {
@@ -17,10 +31,24 @@ body {
 
 .flex {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
 ul {
     list-style-type: none;
+}
+
+.btn {
+    background-color: #0171DB;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    border: none;
+}
+
+.links {
+    text-decoration: none;
+    color: white;
+    padding: 0 1rem;
 }

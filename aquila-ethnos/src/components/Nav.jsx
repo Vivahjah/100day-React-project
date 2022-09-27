@@ -1,27 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { nav } from "../data";
-import { Logo } from "../assets/logo"
+import Button from "./Button";
+
 
 const Nav = () => {
   return (
   
       <nav>
-        <div className="flex">
+        <div className="flex nav-bar">
           <div className="logo">
-            <img src={Logo} alt="logo" />
+            <img src="../assets/logo.png" alt="logo" />
           </div>
           <div className="">
-            <ul>
+            <ul className="flex">
               {nav.map((list, index) => (
                 <li key={index}>
-                  <Link to={list.path}>{list.text}</Link>
+                  <Link className='links' to={list.path}>{list.text}</Link>
                 </li>
               ))}
             </ul>
           </div>
           <div className="">
-            <button> Sign In</button>
+            <Button title="Login" />
           </div>
         </div>
       </nav>
