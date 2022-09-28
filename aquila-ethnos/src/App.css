@@ -45,10 +45,121 @@ ul {
     padding: 10px 25px;
     border-radius: 50px;
     border: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .links {
     text-decoration: none;
     color: white;
     padding: 0 1rem;
+}
+
+.hero {
+    background-color: #1A303D;
+    height: 400px
+}
+
+.hero-text h4 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
+    color: #0171DB;
+    margin: 1.5rem 0;
+    letter-spacing: 0.06em;
+}
+
+.hero-text p {
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.06em;
+    margin: 1.5rem 0;
+}
+
+article .header {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 20px;
+    color: #0171DB;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+article {
+    position: relative;
+}
+
+.section-card {
+    width: 100%;
+    height: 407px;
+    margin: 0 auto;
+    position: relative;
+    background: brown;
+    font-size: 0.8rem
+}
+
+.card {
+    background-color: white;
+    border-top: 1rem solid #0171DB;
+    padding: 1rem;
+    margin: 3rem 1rem;
+    height: 280px;
+    width: 280px;
+    /* position: absolute; */
+}
+
+.card-top {
+    color: #0171DB;
+    text-align: center;
+}
+
+.card-info {
+    margin: 1.rem;
+    padding: 2rem;
+}
+
+.card-icon {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.card-purpose {
+    font-weight: 700;
+    margin: 0.5rem;
+    font-size: 0.7rem;
+}
+
+.card-title {
+    font-size: 12px;
+    margin: 1rem 0;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+}
+
+.card-links {
+    color: #0171DB;
+    margin: 1rem 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.home-sub {
+    text-align: center;
+}
+
+.home-sub h2 {
+    color: #0171DB;
+    margin-bottom: 1.5rem;
+}
+
+.home-sub p {
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+footer {
+    background-color: #1A303D
 }

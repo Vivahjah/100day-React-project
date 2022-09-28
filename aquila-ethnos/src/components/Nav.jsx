@@ -10,7 +10,7 @@ const Nav = () => {
       <nav>
         <div className="flex nav-bar">
           <div className="logo">
-            <img src="../assets/logo.png" alt="logo" />
+            <img src="../../public/images/logo.png" alt="Logo" />
           </div>
           <div className="">
             <ul className="flex">
