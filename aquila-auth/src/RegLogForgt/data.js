@@ -29,7 +29,7 @@ export const signupInput = [{
     {
         id: 5,
         name: 'password',
-        type: 'text',
+        type: 'password',
         placeholder: 'Password',
         pattern: null,
         errorMessage: 'Password should contain numbers and symbols',
@@ -38,7 +38,7 @@ export const signupInput = [{
     {
         id: 6,
         name: 'confirmPassword',
-        type: 'text',
+        type: 'password',
         placeholder: 'Comfirm Password',
         errorMessage: 'Passoword do not match',
         required: true

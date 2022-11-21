@@ -1,5 +1,5 @@
 body {
-    background-image: url("https://images.unsplash.com/photo-1561998338-13ad7883b20f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGFic3RyYWN0JTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+    background-image: url("https://images.unsplash.com/photo-1597773150796-e5c14ebecbf5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YWJzdHJhY3QlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
     background-position: cover;
     background-repeat: no-repeat;
     background-size: cover;
@@ -38,6 +38,7 @@ body {
 }
 
 .form-input span {
+    display: none;
     color: red;
     font-size: 8px;
     font-weight: 500;
@@ -57,9 +58,11 @@ body {
     display: block;
 }
 
+
+/* 
 .form-input input:invalid[focused='true'] {
     border-color: red;
-}
+} */
 
 
 /* Login CSS */

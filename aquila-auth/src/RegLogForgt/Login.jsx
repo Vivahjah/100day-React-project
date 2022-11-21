@@ -8,19 +8,19 @@ const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  const [show, setShow] = useState(true)
+  // const [show, setShow] = useState(true)
 
   const handleSubmit =(e)=> {
     e.preventDefault();
 
   }
 
-  const handleShowPassword = () => {
-    setShow(!show);
+  // const handleShowPassword = () => {
+  //   setShow(!show);
   
   
 
-  }
+  // }
   return (
     <div className='body'>
         
@@ -31,7 +31,7 @@ const Login = () => {
                 <form className='login-form' onSubmit={handleSubmit}>
                     <input type='email' required value={email} placeholder='Email' onChange={(e) => setEmail(e.target.value)} />
                     <input className='passInput' required value={password} type='password' placeholder='Password' onChange={(e) => setPassword(e.target.value)} name='password' /> 
-                    <span onClick={handleShowPassword} className='passIcon'>{ show ? <BiHide /> : <BiShow />}</span>
+                    {/* <span onClick={handleShowPassword} className='passIcon'>{ show ? <BiHide /> : <BiShow />}</span> */}
                     <p style={{fontSize:'16px', textAlign:'right', color:'#335AA3', fontWeight:'600', cursor:'pointer'}}>Forget Password?</p>
 
                     <Button text='Sign in to Aquila' />
@@ -44,6 +44,7 @@ const Login = () => {
 
     </div>
   )
+  
 }
 
 export default Login
