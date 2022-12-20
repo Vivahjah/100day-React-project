@@ -4,11 +4,9 @@
     height: 200px;
     border: 2px dashed var(--border-color);
     border-radius: 20px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     background-color: var(--input-bg);
 }
 
@@ -56,7 +54,7 @@
     margin-bottom: 10px;
     background-color: var(--input-bg);
     padding: 15px;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .drop-file-preview__item img {

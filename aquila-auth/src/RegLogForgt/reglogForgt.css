@@ -58,11 +58,9 @@ body {
     display: block;
 }
 
-
-/* 
-.form-input input:invalid[focused='true'] {
+.form-input input:invalid[focused='true']~input {
     border-color: red;
-} */
+}
 
 
 /* Login CSS */
